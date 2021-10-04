@@ -1,0 +1,24 @@
+{
+  "name": "teamprofilegen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kirkh43064/TeamProfileGen.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kirkh43064/TeamProfileGen/issues"
+  },
+  "homepage": "https://github.com/kirkh43064/TeamProfileGen#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "inquirer": "^8.1.5",
+    "jest": "^27.2.4"
+  }
+}
