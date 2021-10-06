@@ -1,15 +1,19 @@
 const inquirer = require("inquirer");
 const js = require("js");
+const fs = require("fs");
 
 const Employee = require("./lib/Employee");
 const Engineer = require("./lib/Engineer");
 const Manager = require("./lib/Manger");
+const Inter = require("./lib.Intern");
+const generateHTML = require("./src/templateHTML");
+
+teamArr = [];
+teamStr = '';
 
 
-
-const getAnswers = (array) => {
-    inquirer
-        .prompt([
+const getAnswers = (answers) => {
+    inquirer.prompt([
             {
                 type: "input",
                 name: "name",
@@ -31,16 +35,6 @@ const getAnswers = (array) => {
                 message: "What is the Employees Office Number?"
             },
             {
-                type: "list",
-                name: "title",
-                message: "What is the Employees Office Number?"
-                choices: [
-                    "Engineer",
-                    "Intern",
-                    "I'm finished building my Team!"
-                ]
-            },
-            {
                 type: "input",
                 name: "github",
                 message: "What is the Employees GitHUb User Name?"
@@ -50,10 +44,36 @@ const getAnswers = (array) => {
                 name: "school",
                 message: "What School does your Employee Attend"
             }
-
-
         ])
-        .then((array) => {
-
+        .then((answers) => {
+            const manager = new Manager(answers.name, answers.id, answers.email, answers.title);
+            teamArr.push(manager);
+            teamStr.push(answers.id);
+            team();
         }
-};
+}
+
+function team() {
+    inquirer.prompt ([
+        {
+            type: "list",
+            name: "memberTitle",
+            message: "What is the Employees Office Number?",
+            choices: [
+                "Engineer",
+                "Intern",
+                "I'm finished building my Team!"
+            ]
+        }
+]).then(userChoice => {
+   switch (userChoice, memberTitle) {
+        case "Engineer":
+           addEngineer();
+           break;
+        case "Intern":
+            addIntern();
+            break;
+        default:
+            team(); 
+   }
+})

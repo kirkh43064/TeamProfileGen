@@ -13,8 +13,8 @@ test("testing the getRole function", () => {
     expect(employee.getRole()).toBe("Engineer");
 });
 
-test("Testing the getGitHub function", () => {
+test("Testing the getGitub function", () => {
     const testV = "kirkh43064";
     const employee = new Engineer("Kirk", 3, "test@cheese.com", testV);
-    expect(employee.getGitHub()).toBe("kirkh43064");
+    expect(employee.getGithub()).toBe("kirkh43064");
 });

@@ -14,7 +14,7 @@ const generateHTML = (team) => {
 <body>
 <div class="header">
     <div class="jumbotron bg-warning">
-        <h1 class="display-4 text-center">My Team</h1>
+        <h1 class="display-4 text-center text-white">My Team</h1>
     </div>
 </div>
 <div class="container-body container-fluid">
@@ -66,5 +66,4 @@ const generateCard = (array) => {
 `
 }
 
-exports.generateHTML = generateHTML;
-exports.generateCard = generateCard;
+module.exports = { generateHTML, generateCard };

@@ -4,13 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kirkh43064/TeamProfileGen.git"
   },
-  "author": "",
+  "author": "Kirk Hallam",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/kirkh43064/TeamProfileGen/issues"
